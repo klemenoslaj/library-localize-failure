@@ -4,6 +4,6 @@ import { LibraryComponent } from './library.component';
 @NgModule({
   declarations: [LibraryComponent],
   exports: [LibraryComponent],
-  providers: [{ provide: 'example', useValue: $localize`Translated` }],
+  providers: [{ provide: 'example', useFactory: () => $localize`Translated` }],
 })
 export class LibraryModule {}
